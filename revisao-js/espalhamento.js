@@ -12,9 +12,9 @@ console.log(maisNumeros)
 
 // Função com parâmetro (ou argumento) de resto
 function somaTudo(...nums) {
-  let soma = 0
-  for(let n of nums) soma += n
-  return soma
+    let soma = 0
+    for (let n of nums) soma += n
+    return soma
 }
 
 console.log(somaTudo(12, 45, -5))
@@ -22,19 +22,19 @@ console.log(somaTudo(2, 76, -2, 41, 19, 11, 22, 30))
 
 // Argumento convencional + argumento de resto
 function calcular(oper, ...nums) {
-  let res
-  switch(oper) {
-    case '+':
-      //res = 0
-      //for(let n of nums) soma += n
-      res = somaTudo(...nums)
-      break
+    let res
+    switch (oper) {
+        case '+':
+            //res = 0
+            //for(let n of nums) soma += n
+            res = somaTudo(...nums)
+            break
 
-    case '*':
-      res = 1
-      for(let n of nums) res *= n
-  }
-  return res
+        case '*':
+            res = 1
+            for (let n of nums) res *= n
+    }
+    return res
 }
 
 console.log(calcular('*', 12, 45, -5))
